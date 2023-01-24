@@ -10,6 +10,11 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene("J_Level1");
     }
 
+    public void EnterLevelsMenu()
+    {
+        SceneManager.LoadScene("Levels");
+    }
+
     public void ExitGame()
     {
         Application.Quit();
