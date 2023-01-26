@@ -4913,6 +4913,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GoToMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 2248895289018764839, guid: 09fc417b9e4159c43853aa5ed19ff026, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09fc417b9e4159c43853aa5ed19ff026, type: 3}
 --- !u!224 &1816694793 stripped
@@ -4945,6 +4949,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1156967359891023326, guid: 09fc417b9e4159c43853aa5ed19ff026, type: 3}
   m_PrefabInstance: {fileID: 1816694792}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1816694799 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7774277870358205364, guid: 09fc417b9e4159c43853aa5ed19ff026, type: 3}
+  m_PrefabInstance: {fileID: 1816694792}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1832306097
 GameObject:
   m_ObjectHideFlags: 0
@@ -5769,6 +5784,7 @@ MonoBehaviour:
   pausePanel: {fileID: 1816694796}
   winPanel: {fileID: 1816694795}
   gameOverPanel: {fileID: 1816694794}
+  hungerSlider: {fileID: 1816694799}
 --- !u!4 &2021570670
 Transform:
   m_ObjectHideFlags: 0

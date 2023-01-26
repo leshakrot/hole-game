@@ -75,6 +75,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Greece/Gr_Level2.unity
     guid: 34cbf834ca4740248b45577c1b4d0558
   - enabled: 1
+    path: Assets/Scenes/Greece/Gr_Level3.unity
+    guid: bba4332d018efbd4a85e2402a8eef75d
+  - enabled: 1
+    path: Assets/Scenes/Greece/Gr_Level4.unity
+    guid: 99de9db8ab9ebe342acbd1959c1c01cd
+  - enabled: 1
+    path: Assets/Scenes/Greece/Gr_Level5.unity
+    guid: 2e1470aa8692d454d8fa8cd6234f2735
+  - enabled: 1
+    path: Assets/Scenes/Big/Big_Level1.unity
+    guid: a4bbe66927eceb54087fb288592769dd
+  - enabled: 1
+    path: Assets/Scenes/Big/Big_Level2.unity
+    guid: 3bbe495d3593a4b41ac42df075d3ff94
+  - enabled: 1
     path: Assets/Scenes/UI/Levels.unity
     guid: 4749d6359202ef44c9a86fcde6de0889
   m_configObjects: {}

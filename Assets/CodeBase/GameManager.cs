@@ -2,21 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private int eatableObjectsCount;
+    public int eatableObjectsCount;
     [SerializeField] private GameObject pauseButton;
     [SerializeField] private GameObject restartButton;
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject winPanel;
     [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private Slider hungerSlider;
     HoleController holeController;
+
+    public static GameManager Instance;
 
     private void Start()
     {
         holeController = GetComponent<HoleController>();
         pausePanel.SetActive(false);
+        hungerSlider.maxValue = eatableObjectsCount;
     }
     private void Update()
     {
@@ -24,13 +29,15 @@ public class GameManager : MonoBehaviour
         {
             winPanel.SetActive(true);
             restartButton.SetActive(false);
-            pauseButton.SetActive(false); 
+            pauseButton.SetActive(false);
+            hungerSlider.gameObject.SetActive(false);
         }
     }
 
     public void Subtract()
     {
         eatableObjectsCount--;
+        hungerSlider.value++;
     }
 
     public void ReloadScene()

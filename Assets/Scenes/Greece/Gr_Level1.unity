@@ -1212,7 +1212,7 @@ GameObject:
   - component: {fileID: 413087057}
   - component: {fileID: 413087059}
   - component: {fileID: 413087058}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: greek_floor_stone_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1696,7 +1696,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 9.848215e-24, z: 4.5905e-41, w: 1e-45}
+  m_BoundingSphereOverride: {x: 1.5795949e-38, y: 1.3683733e-38, z: 1.368373e-38, w: 1.51531e-38}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1888,7 +1888,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6a723adf9bbee4535b3b125e8b3f8c6f, type: 2}
+  - {fileID: 2100000, guid: 83adef7aea43b88469d39be07c22d004, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1986,7 +1986,7 @@ MonoBehaviour:
   speedModifier: 0.0075
   horizontalInput: 0
   verticalInput: 0
-  xRangeOrthogonal: 2
+  xRangeOrthogonal: 6
   yUpperRange: 12
   yLowerRange: 0
 --- !u!4 &791121442
@@ -2283,7 +2283,7 @@ GameObject:
   - component: {fileID: 921488174}
   - component: {fileID: 921488176}
   - component: {fileID: 921488175}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: greek_floor_stone_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2669,6 +2669,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2021570669}
+    - target: {fileID: 2248895289018764839, guid: 09fc417b9e4159c43853aa5ed19ff026, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09fc417b9e4159c43853aa5ed19ff026, type: 3}
 --- !u!224 &1103442463 stripped
@@ -2701,6 +2705,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1156967360394999285, guid: 09fc417b9e4159c43853aa5ed19ff026, type: 3}
   m_PrefabInstance: {fileID: 1103442462}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1103442469 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7774277870358205364, guid: 09fc417b9e4159c43853aa5ed19ff026, type: 3}
+  m_PrefabInstance: {fileID: 1103442462}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1115902399
 GameObject:
   m_ObjectHideFlags: 0
@@ -4143,7 +4158,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6a723adf9bbee4535b3b125e8b3f8c6f, type: 2}
+  - {fileID: 2100000, guid: 83adef7aea43b88469d39be07c22d004, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4208,6 +4223,7 @@ MonoBehaviour:
   pausePanel: {fileID: 1103442465}
   winPanel: {fileID: 1103442464}
   gameOverPanel: {fileID: 1103442468}
+  hungerSlider: {fileID: 1103442469}
 --- !u!4 &2021570670
 Transform:
   m_ObjectHideFlags: 0
@@ -4496,7 +4512,7 @@ GameObject:
   - component: {fileID: 4580088849375807}
   - component: {fileID: 33494901740491099}
   - component: {fileID: 23287682362659757}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: greek_floor_stone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5006,7 +5022,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6a723adf9bbee4535b3b125e8b3f8c6f, type: 2}
+  - {fileID: 2100000, guid: 83adef7aea43b88469d39be07c22d004, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6321,7 +6337,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6a723adf9bbee4535b3b125e8b3f8c6f, type: 2}
+  - {fileID: 2100000, guid: 83adef7aea43b88469d39be07c22d004, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
