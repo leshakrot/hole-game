@@ -12,6 +12,7 @@ public class HoleTrigger : MonoBehaviour
     [SerializeField] private int objectsToGrow;
     [SerializeField] private float forceFactor = 100f;
     [SerializeField] private Vector3 scaleChange;
+    [SerializeField] private AudioSource swallowSound;
     AborigeneController aborigene;
     GameManager gameManager;
     HoleController holeController;
@@ -39,6 +40,13 @@ public class HoleTrigger : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        other.gameObject.layer = 9;
+        if (IsAborigene(other))
+        {
+            other.gameObject.GetComponent<NavMeshAgent>().enabled = false;
+            other.gameObject.GetComponent<AborigeneController>().enabled = false;
+        }
+
         if (IsAborigene(other))
         {
             Swallow(other);    
@@ -47,6 +55,7 @@ public class HoleTrigger : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Aborigene") && !winPanel.activeSelf) 
             {
+                gameManager.levelMusic.gameObject.SetActive(false);
                 gameOverPanel.SetActive(true);
                 restartButton.SetActive(false);
                 pauseButton.SetActive(false);
@@ -55,6 +64,7 @@ public class HoleTrigger : MonoBehaviour
             } 
             else
                 {
+                    swallowSound.Play();
                     gameManager.Subtract();
                     counter++;
                     Destroy(other.gameObject);

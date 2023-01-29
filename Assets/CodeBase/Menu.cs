@@ -7,16 +7,12 @@ public class Menu : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("J_Level1");
+        if (PlayerPrefs.GetInt("levelAt") == 0) SceneManager.LoadScene("Level " + 1);
+        else SceneManager.LoadScene("Level " + PlayerPrefs.GetInt("levelAt"));
     }
 
     public void EnterLevelsMenu()
     {
         SceneManager.LoadScene("Levels");
-    }
-
-    public void ExitGame()
-    {
-        Application.Quit();
     }
 }

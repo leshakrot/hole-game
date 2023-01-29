@@ -11,8 +11,8 @@ public class HoleController : MonoBehaviour
 	[SerializeField] private float speed;
 	[SerializeField] private float speedModifier;
 
-	[SerializeField] private float horizontalInput;
-    [SerializeField] private float verticalInput;
+	public float horizontalInput;
+    public float verticalInput;
 
 
 	[SerializeField] private float xRangeOrthogonal;
@@ -21,7 +21,22 @@ public class HoleController : MonoBehaviour
 
 	private Touch touch;
 
-	private void Start()
+	public static HoleController Instance;
+
+    private void Awake()
+    {
+        if(Instance == null)
+        {
+			Instance = this;
+        }
+        else
+        {
+			Destroy(gameObject);
+        }
+		transform.parent = null;
+    }
+
+    private void Start()
     {
 		Time.timeScale = 1f;
 		viewAngle *= (Math.PI / 180); 
