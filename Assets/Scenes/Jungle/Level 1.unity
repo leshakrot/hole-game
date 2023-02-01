@@ -494,7 +494,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 407244584}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.59, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1789421129}
@@ -538,7 +538,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 464860046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.02, y: 0, z: 0}
+  m_LocalPosition: {x: 7.37, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1789421129}
@@ -1661,7 +1661,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eatableObjectsCount: 11
   nextSceneLoad: 0
-  hudButtons: {fileID: 1156967360576492829}
+  restartButton: {fileID: 686076098}
+  pauseButton: {fileID: 1671285964}
+  volumeButton: {fileID: 1156967360576492830}
+  musicButton: {fileID: 1156967360576492829}
   pausePanel: {fileID: 1286428141}
   winPanel: {fileID: 1669689311}
   gameOverPanel: {fileID: 1757414687}
@@ -1932,7 +1935,12 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 09fc417b9e4159c43853aa5ed19ff026, type: 3}
 --- !u!1 &1156967360576492829 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4240354559504486516, guid: 09fc417b9e4159c43853aa5ed19ff026, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7137838574177522210, guid: 09fc417b9e4159c43853aa5ed19ff026, type: 3}
+  m_PrefabInstance: {fileID: 1156967360576492828}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1156967360576492830 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9204545199339678957, guid: 09fc417b9e4159c43853aa5ed19ff026, type: 3}
   m_PrefabInstance: {fileID: 1156967360576492828}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2594543362659108975

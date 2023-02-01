@@ -19,7 +19,7 @@ public class HoleController : MonoBehaviour
 	[SerializeField] private float yUpperRange;
 	[SerializeField] private float yLowerRange;
 
-	private Touch touch;
+	public Touch touch;
 
 	public static HoleController Instance;
 

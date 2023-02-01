@@ -1,13 +1,23 @@
 using System;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    [DllImport("__Internal")]
+    private static extern void SkipLevelExtern();
+
+    [DllImport("__Internal")]
+    private static extern void ShowAdv();
+
     public int eatableObjectsCount;
     public int nextSceneLoad;
-    [SerializeField] private GameObject hudButtons;
+    [SerializeField] private GameObject restartButton;
+    [SerializeField] private GameObject pauseButton;
+    [SerializeField] private GameObject volumeButton;
+    [SerializeField] private GameObject musicButton;
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject winPanel;
     [SerializeField] private GameObject gameOverPanel;
@@ -19,7 +29,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        int temp = PlayerPrefs.GetInt("isMusicActive");
+        int temp = PlayerPrefs.GetInt("isMusicActive", 1);
         int temp1 = PlayerPrefs.GetInt("isGlobalSoundActive", 1);
         bool isMusicActive = Convert.ToBoolean(temp);
         levelMusic.gameObject.SetActive(isMusicActive);
@@ -33,8 +43,9 @@ public class GameManager : MonoBehaviour
     {
         if(eatableObjectsCount <= 0)
         {
+            ShowAdv();
             winPanel.SetActive(true);
-            hudButtons.SetActive(false);
+            DisableHudButtons();
             hungerSlider.gameObject.SetActive(false);
             levelMusic.gameObject.SetActive(false);
         }
@@ -63,14 +74,14 @@ public class GameManager : MonoBehaviour
     public void PauseOn()
     {
         Time.timeScale = 0f;
-        hudButtons.SetActive(false);
+        DisableHudButtons();
         pausePanel.SetActive(true);
     }
 
     public void PauseOff()
     {
         Time.timeScale = 1f;
-        hudButtons.SetActive(true);
+        EnableHudButtons();
         pausePanel.SetActive(false);
     }
 
@@ -107,5 +118,31 @@ public class GameManager : MonoBehaviour
             levelMusic.gameObject.SetActive(true);
             PlayerPrefs.SetInt("isMusicActive", 1);
         }
+    }
+
+    void DisableHudButtons()
+    {
+        restartButton.SetActive(false);
+        pauseButton.SetActive(false);
+        volumeButton.SetActive(false);
+        musicButton.SetActive(false);
+    }
+
+    void EnableHudButtons()
+    {
+        restartButton.SetActive(true);
+        pauseButton.SetActive(true);
+        volumeButton.SetActive(true);
+        musicButton.SetActive(true);
+    }
+
+    public void ShowAdvButton()
+    {
+        SkipLevelExtern();
+    }
+
+    public void SkipLevel()
+    {
+        SceneManager.LoadScene(nextSceneLoad);
     }
 }
